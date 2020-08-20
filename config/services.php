@@ -34,4 +34,15 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => env('FACEBOOK_API_ID'),
+        'client_secret' => env('FACEBOOK_API_SECRET'),
+        'redirect' => env('FACEBOOK_CALLBACK'),
+    ],
+
+    'google' => [
+        'client_id' => env('GOOGLE_API_ID'),
+        'client_secret' => env('GOOGLE_API_SECRET'),
+        'redirect' => env('GOOGLE_CALLBACK'),
+    ],
 ];

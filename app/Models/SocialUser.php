@@ -1,9 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User as UserEloquent;
+use App\Models\User as UserEloquent;
 
 class SocialUser extends Model
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\SocialUser as SocialUserEloquent;
+use App\Models\SocialUser as SocialUserEloquent;
 
 class User extends Authenticatable
 {

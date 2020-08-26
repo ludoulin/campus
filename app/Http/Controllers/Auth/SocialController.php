@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\User as UserEloquent;
-use App\SocialUser as SocialUserEloquent;
+use App\Models\User as UserEloquent;
+use App\Models\SocialUser as SocialUserEloquent;
 use App;
 use Auth;
 use Config;

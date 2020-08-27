@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User as UserEloquent;
 use App\Models\SocialUser as SocialUserEloquent;
 use App;
@@ -65,7 +66,7 @@ class SocialController extends Controller
 			}else{
 				$login_user = UserEloquent::create([
 					'email' => $socialite_user->email,
-					'password' => bcrypt(str_random(8)),
+					'password' => Hash::make(str_random(8)),
 					'name' => $socialite_user->name,
                       'avatar' => $socialite_user->avatar,
                 ]);
@@ -80,7 +81,7 @@ class SocialController extends Controller
            
         if(!is_null($login_user)){
             Auth::login($login_user);
-            return Redirect::route('root');
+            return Redirect::route('root')->with('success', '您已成功登入！');
         }
         return App::abort(500);
     }

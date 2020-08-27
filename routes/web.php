@@ -40,6 +40,12 @@ Route::prefix('login/social')->name('social.')->group(function(){
     Route::get('{provider}/callback', 'Auth\SocialController@getSocialCallback')->name('callback');
 });
 
+Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
+Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
+
+
+
 
 
 
